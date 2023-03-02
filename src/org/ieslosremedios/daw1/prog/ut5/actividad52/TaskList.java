@@ -5,7 +5,17 @@ import java.util.*;
 import static java.awt.SystemColor.window;
 
 public class TaskList {
-    public static void addTask(List<String> list,String task){
+    private List<String> listaTareas;
+
+    public TaskList(String tipoLista) {
+        if (tipoLista.equalsIgnoreCase("ArrayList")){
+            listaTareas=new ArrayList<String>();
+        }else{
+            listaTareas=new LinkedList<>();
+        }
+    }
+
+    public static void addTask(List<String> list, String task){
         list.add(task);
         System.out.println("Tarea añadida: "+task);
     }

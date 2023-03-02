@@ -5,19 +5,12 @@ public class Actividad52Main{
 
     public static void main(String[] args) {
         System.out.println("           Lista de Tareas   ");
-        String opcion1="ArrayList";
-        System.out.println("Usaremos, en este caso, "+opcion1);
-        List<String> lista;
-        if (opcion1.equalsIgnoreCase("ArrayList")){
-            lista=new ArrayList<String>();
-        }else{
-            lista=new LinkedList<>();
-        }
-        System.out.println("Opciones disponibles de "+opcion1);
+        TaskList tareas=new TaskList("ArrayList");
+        System.out.println("Opciones disponibles");
         System.out.println("__________________________________");
         System.out.println("1. Agrega una nueva tarea a la lista");
         System.out.println();
-        TaskList.addTask(lista,"Tomar apuntes");
+        tareas.addTask(listaTareas"Tomar apuntes");
         TaskList.addTask(lista,"Apuntar posibles dudas");
         TaskList.addTask(lista,"Realizar los ejercicios correspondientes");
         TaskList.addTask(lista,"Preguntar las dudas al profesor");
@@ -34,7 +27,7 @@ public class Actividad52Main{
         System.out.println("4. Imprimir todas las tareas");
         System.out.println();
         for (String e:
-             lista) {
+                lista) {
             System.out.println(e);
         }
 
